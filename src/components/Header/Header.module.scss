@@ -1,0 +1,11 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
+
+.title {
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+.header {
+  @include flexbox.flexbox(center, center);
+}
