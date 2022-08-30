@@ -2,11 +2,67 @@ const Subway = () => {
   return (
     <div>
       <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg1.png'
+        width='1650'
+        height='1325'
+        alt='1호선'
+        id='1'
+      />
+      <img
         src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg2.png'
         width='1650'
         height='1325'
-        alt='수도권 2호선'
-        useMap='#imgmap_sg2'
+        alt='2호선'
+        id='2'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg3.png'
+        width='1650'
+        height='1325'
+        alt='3호선'
+        id='3'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg4.png'
+        width='1650'
+        height='1325'
+        alt='4호선'
+        id='4'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg5.png'
+        width='1650'
+        height='1325'
+        alt='5호선'
+        id='5'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg6.png'
+        width='1650'
+        height='1325'
+        alt='6호선'
+        id='6'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg7.png'
+        width='1650'
+        height='1325'
+        alt='7호선'
+        id='7'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg8.png'
+        width='1650'
+        height='1325'
+        alt='8호선'
+        id='8'
+      />
+      <img
+        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg9.png'
+        width='1650'
+        height='1325'
+        alt='9호선'
+        id='9'
       />
     </div>
   )
