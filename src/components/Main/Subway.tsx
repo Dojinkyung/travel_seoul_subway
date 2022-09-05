@@ -1,26 +1,15 @@
-import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { getTrainId } from '../../redux/slice'
-import styles from './subway.module.scss'
+import Line1 from './lines/Line1'
+import Line2 from './lines/Line2'
 
 const Subway = () => {
   const selected = useSelector(getTrainId)
-  console.log(selected)
   return (
     <div>
-      <img
-        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg1.png'
-        alt='1호선'
-        className={cx({ [styles.unSelected]: selected !== '1', [styles.selected]: selected === '1' })}
-        id='1'
-      />
-      <img
-        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg2.png'
-        alt='2호선'
-        className={cx({ [styles.unSelected]: selected !== '2', [styles.selected]: selected === '2' })}
-        id='2'
-      />
-      <img
+      <Line1 selected={selected} />
+      <Line2 selected={selected} />
+      {/* <img
         src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg3.png'
         alt='3호선'
         className={cx({ [styles.unSelected]: selected !== '3', [styles.selected]: selected === '3' })}
@@ -61,7 +50,7 @@ const Subway = () => {
         alt='9호선'
         className={cx({ [styles.unSelected]: selected !== '9', [styles.selected]: selected === '9' })}
         id='9'
-      />
+      /> */}
     </div>
   )
 }
