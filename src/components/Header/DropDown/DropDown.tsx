@@ -24,7 +24,7 @@ const Dropdown = () => {
     // { name: '수인선', id: 17 },
   ]
   const dispatch = useDispatch()
-  const [trainValue, setTrainValue] = useState('호선')
+  const [trainValue, setTrainValue] = useState('1호선')
   const [trainLine, setTrainLine] = useState('1')
   const [show, setShow] = useState(false)
 
