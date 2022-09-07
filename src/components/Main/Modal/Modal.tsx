@@ -1,4 +1,5 @@
 import cx from 'classnames'
+import { X } from '../../../assets/svgs'
 import styles from './modal.module.scss'
 
 interface props {
@@ -20,11 +21,17 @@ const Modal = (props: props) => {
   return (
     <div className={cx({ [styles.bg]: open })} onClick={handleClickOutside} aria-hidden>
       <div className={cx({ [styles.modalActive]: open })}>
+        <button type='button' className={styles.btn} onClick={close}>
+          <X />
+        </button>
         <div className={styles.area} onClick={handleModalContent} aria-hidden>
-          <p className={styles.info}>{item} 역</p>
-          <button type='button' className={styles.btn} onClick={close}>
-            취소
-          </button>
+          <div className={styles.station}>
+            <div className={styles.line} />
+            <div className={styles.circle}>
+              <p className={styles.info}>{item}역</p>
+            </div>
+            <div className={styles.line} />
+          </div>
         </div>
       </div>
     </div>
