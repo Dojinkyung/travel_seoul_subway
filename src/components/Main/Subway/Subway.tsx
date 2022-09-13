@@ -1,14 +1,12 @@
-import cx from 'classnames'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { getTrainId } from '../../../redux/slice'
 import Modal from '../Modal/Modal'
 import { items } from './Lines'
 import styles from './subway.module.scss'
 
-interface propsType {
-  selected: string
-}
-const Line1 = (props: propsType) => {
-  const { selected } = props
+const Subway = () => {
+  const selected = useSelector(getTrainId)
   const [station, setStation] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const closeReq = () => {
@@ -20,16 +18,16 @@ const Line1 = (props: propsType) => {
   }
 
   return (
-    <div className={cx({ [styles.unSelected]: selected !== '1', [styles.selected]: selected === '1' })}>
+    <div className={styles.image}>
       <img
-        useMap='#imgmap_sg1'
-        src='https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg1.png'
-        alt='1호선'
-        id='1'
+        useMap={`#imgmap_sg${selected}`}
+        src={`https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg${selected}.png`}
+        alt={`${selected}호선`}
+        id={`${selected}`}
         width='1650'
         height='1325'
       />
-      <map name='#imgmap_sg1'>
+      <map name={`#imgmap_sg${selected}`}>
         {items[Number(selected) - 1].map((item) => {
           return (
             <area
@@ -48,4 +46,4 @@ const Line1 = (props: propsType) => {
     </div>
   )
 }
-export default Line1
+export default Subway

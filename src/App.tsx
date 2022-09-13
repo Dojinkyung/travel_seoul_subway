@@ -1,5 +1,5 @@
 import Header from './components/Header/Header'
-import Subway from './components/Main/Subway'
+import Subway from './components/Main/Subway/Subway'
 
 const App = () => {
   return (
