@@ -39,8 +39,8 @@
     height: 590px;
     .station {
       @include flexbox.flexbox(center, center);
-      flex-direction: row;
       height: 80px;
+      flex-direction: row;
       margin-bottom: 400px;
       .circle {
         width: 80px;
@@ -58,8 +58,9 @@
         }
       }
       .line {
-        width: 130px;
-        border: 15px solid colors.$BLUE;
+        width: 160px;
+        height: 40px;
+        border: none;
         background-color: colors.$BLUE;
       }
     }
