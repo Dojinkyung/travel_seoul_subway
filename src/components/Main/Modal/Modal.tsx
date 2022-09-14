@@ -17,7 +17,7 @@ const Modal = (props: props) => {
   const handleModalContent = (event: { stopPropagation: () => void }) => {
     event.stopPropagation()
   }
-
+  const colors = ['#5856d6', '#34c759']
   return (
     <div className={cx({ [styles.bg]: open })} onClick={handleClickOutside} aria-hidden>
       <div className={cx({ [styles.modalActive]: open })}>
@@ -26,14 +26,17 @@ const Modal = (props: props) => {
         </button>
         <div className={styles.area} onClick={handleModalContent} aria-hidden>
           <div className={styles.station}>
-            <div className={styles.line} />
-            <div className={cx({ [styles.circle]: open })}>
+            <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
+            <div
+              className={cx({ [styles.circle]: open })}
+              style={{ borderColor: colors[parseInt(selectedLine, 10) - 1] }}
+            >
               <p className={styles.info}>
                 {item}
                 {selectedLine}
               </p>
             </div>
-            <div className={styles.line} />
+            <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
           </div>
         </div>
       </div>
