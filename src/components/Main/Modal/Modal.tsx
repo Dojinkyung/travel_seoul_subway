@@ -1,5 +1,6 @@
 import cx from 'classnames'
 import { X } from '../../../assets/svgs'
+import Map from '../../Map/MapContainer'
 
 import styles from './modal.module.scss'
 
@@ -35,6 +36,7 @@ const Modal = (props: props) => {
             </div>
             <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
           </div>
+          <Map searchKeyword={`${item}역`} />
         </div>
       </div>
     </div>
