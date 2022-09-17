@@ -42,9 +42,6 @@ const Map = (props: propsType) => {
     }
     const searchPlaces = () => {
       const keyword = searchKeyword
-      // const searchOption = {
-      //   category_group_code: 'AT4,CT1,CE7,FD6',
-      // }
       ps.keywordSearch(keyword, placesSearchCB)
       return true
     }

@@ -18,7 +18,7 @@ const Modal = (props: props) => {
   const handleModalContent = (event: { stopPropagation: () => void }) => {
     event.stopPropagation()
   }
-  const colors = ['#5856d6', '#34c759']
+  const colors = ['	#0052A4', '#009D3E', '#EF7C1C', '#00A5DE', '#996CAC', '#CD7C2F', '#747F00', '#EA545D', '#BB8336']
   return (
     <div className={cx({ [styles.bg]: open })} onClick={handleClickOutside} aria-hidden>
       <div className={cx({ [styles.modalActive]: open })}>
