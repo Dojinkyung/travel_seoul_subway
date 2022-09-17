@@ -26,7 +26,7 @@ const Modal = (props: props) => {
           <X />
         </button>
         <div className={styles.area} onClick={handleModalContent} aria-hidden>
-          <div className={styles.station}>
+          <header className={styles.station}>
             <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
             <div
               className={cx({ [styles.circle]: open })}
@@ -35,8 +35,10 @@ const Modal = (props: props) => {
               <p className={styles.info}>{item}</p>
             </div>
             <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
-          </div>
-          <Map searchKeyword={`${item}역`} />
+          </header>
+          <main className={styles.map}>
+            <Map searchKeyword={`${item}역 맛집`} />
+          </main>
         </div>
       </div>
     </div>

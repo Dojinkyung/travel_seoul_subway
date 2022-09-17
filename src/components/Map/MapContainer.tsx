@@ -42,10 +42,10 @@ const Map = (props: propsType) => {
     }
     const searchPlaces = () => {
       const keyword = searchKeyword
-      const searchOption = {
-        category_group_code: 'AT4,CT1,CE7,FD6',
-      }
-      ps.keywordSearch(keyword, placesSearchCB, searchOption)
+      // const searchOption = {
+      //   category_group_code: 'AT4,CT1,CE7,FD6',
+      // }
+      ps.keywordSearch(keyword, placesSearchCB)
       return true
     }
     // 키워드로 장소를 검색합니다
@@ -128,11 +128,7 @@ const Map = (props: propsType) => {
     <div className='map-container'>
       <div id='map' className={styles.map} />
       <div id='search-result'>
-        <p className='result-text'>
-          <span className='result-keyword'>{searchKeyword}</span>
-          검색 결과
-        </p>
-        <div className={styles.list}>
+        <div className={styles.listResult}>
           <ul id='places-list' className={styles.list} />
         </div>
       </div>

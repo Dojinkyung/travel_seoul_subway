@@ -36,12 +36,13 @@
   }
   .area {
     @include flexbox.flexbox(center, center);
+    flex-direction: column;
     height: 590px;
     .station {
       @include flexbox.flexbox(center, center);
       height: 80px;
+      margin-bottom: 80px;
       flex-direction: row;
-      margin-bottom: 400px;
       .circle {
         width: 80px;
         height: 80px;
