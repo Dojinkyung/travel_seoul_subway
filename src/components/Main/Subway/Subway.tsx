@@ -24,6 +24,7 @@ const Subway = () => {
         src={`https://ssl.pstatic.net/sstatic/keypage/outside/subway/img/220718/smap_sg${selected}.png`}
         alt={`${selected}호선`}
         id={`${selected}`}
+        className={styles.subwayTrain}
         width='1650'
         height='1325'
       />

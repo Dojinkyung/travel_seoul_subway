@@ -32,7 +32,7 @@ const Modal = (props: props) => {
               className={cx({ [styles.circle]: open })}
               style={{ borderColor: colors[parseInt(selectedLine, 10) - 1] }}
             >
-              <p className={styles.info}>{item}</p>
+              <h1 className={styles.info}>{item}역</h1>
             </div>
             <div className={styles.line} style={{ backgroundColor: colors[parseInt(selectedLine, 10) - 1] }} />
           </header>

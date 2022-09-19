@@ -1,11 +1,30 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
 .map {
   display: none;
 }
 .listResult {
+  width: 270px;
   height: 350px;
-  width: 250px;
-}
-.list {
-  height: 100%;
-  width: 100%;
+  .list {
+    width: 270px;
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    li {
+      @include flexbox.flexbox(center, center);
+      height: 60px;
+      margin-bottom: 10px;
+      border: 1px solid colors.$GRAYA;
+      border-radius: 5px;
+      font-size: 18px;
+      a {
+        color: colors.$GRAY2;
+        text-decoration: none;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }

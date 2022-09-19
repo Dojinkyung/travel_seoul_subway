@@ -14,14 +14,6 @@ const Dropdown = () => {
     { name: '7호선', id: 7 },
     { name: '8호선', id: 8 },
     { name: '9호선', id: 9 },
-    // { name: '인천1', id: 10 },
-    // { name: '분당선', id: 11 },
-    // { name: '경의선', id: 12 },
-    // { name: '신분당선', id: 13 },
-    // { name: '공항철도', id: 14 },
-    // { name: '중앙선', id: 15 },
-    // { name: '경춘선', id: 16 },
-    // { name: '수인선', id: 17 },
   ]
   const dispatch = useDispatch()
   const [trainValue, setTrainValue] = useState('1호선')
@@ -35,33 +27,32 @@ const Dropdown = () => {
   const onValue = (event: { currentTarget: { name: SetStateAction<string>; value: SetStateAction<string> } }) => {
     setTrainValue(event.currentTarget.name)
     setTrainLine(event.currentTarget.value)
+    setShow((current) => !current)
   }
   useEffect(() => {
     dispatch(setTrainId(trainLine))
   }, [dispatch, trainLine])
 
   return (
-    <div>
-      <div className={styles.dropDown}>
-        <button type='button' onClick={onClick} className={styles.dropDownBtn}>
-          {trainValue}
-        </button>
+    <div className={styles.dropDown}>
+      <button type='button' onClick={onClick} className={styles.dropDownBtn}>
+        {trainValue}
+      </button>
 
-        <ul id='dropdown' className={show ? styles.select : styles.hidden}>
-          {lines.map((line) => (
-            <button
-              type='button'
-              key={line.id}
-              onClick={onValue}
-              className={styles.dropBtn}
-              name={`${line.name}`}
-              value={line.id}
-            >
-              {line.name}
-            </button>
-          ))}
-        </ul>
-      </div>
+      <ul id='dropdown' className={show ? styles.selected : styles.hidden}>
+        {lines.map((line) => (
+          <button
+            type='button'
+            key={line.id}
+            onClick={onValue}
+            className={styles.dropBtn}
+            name={`${line.name}`}
+            value={line.id}
+          >
+            {line.name}
+          </button>
+        ))}
+      </ul>
     </div>
   )
 }

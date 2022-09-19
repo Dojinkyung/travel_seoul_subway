@@ -2,7 +2,6 @@
 @use '/src/styles/constants/levels';
 @use '/src/styles/mixins/flexbox';
 @use '/src/styles/mixins/position';
-
 .bg {
   display: flex;
   z-index: 9999;
@@ -14,6 +13,9 @@
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(2px);
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 .modalActive {
   @include flexbox.flexbox(center, center);
@@ -21,31 +23,33 @@
   height: 600px;
   flex-direction: column;
   background-color: colors.$GRAYD;
-  color: colors.$BACKGROUND_COLOR;
+  color: colors.$GRAY2;
   border-radius: 8px;
   padding: 10px;
 
   .btn {
     width: 20px;
     height: 20px;
+    position: fixed;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 250px;
-    margin-top: 10px;
+    margin-left: 260px;
+    margin-bottom: 570px;
   }
   .area {
-    @include flexbox.flexbox(center, center);
+    @include flexbox.flexbox(start, center);
+    height: 600px;
+    padding-top: 80px;
     flex-direction: column;
-    height: 590px;
     .station {
       @include flexbox.flexbox(center, center);
-      height: 80px;
-      margin-bottom: 80px;
+      margin-bottom: 100px;
       flex-direction: row;
       .circle {
-        width: 80px;
-        height: 80px;
+        @include flexbox.flexbox(center, center);
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         border: 20px solid;
         background-color: colors.$WHITE;
@@ -64,5 +68,9 @@
         border: none;
       }
     }
+  }
+  .map {
+    height: 300px;
+    overflow: scroll;
   }
 }

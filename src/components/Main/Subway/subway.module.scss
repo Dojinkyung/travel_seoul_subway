@@ -1,9 +1,33 @@
-.image {
-  display: block;
-  width: 1650px;
-  height: 1325px;
-}
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
 
+.image::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.image::-webkit-scrollbar-thumb {
+  background-color: colors.$GRAY3;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.image::-webkit-scrollbar-track {
+  background-color: colors.$GRAYA;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px colors.$GRAYD;
+}
+.image {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: 0px auto;
+  overflow: auto;
+
+  .subwayTrain {
+    width: 1650;
+    height: 1325;
+  }
+}
 area {
   cursor: pointer;
 }

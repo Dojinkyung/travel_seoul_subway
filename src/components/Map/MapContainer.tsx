@@ -77,31 +77,7 @@ const Map = (props: propsType) => {
     // 검색결과 항목을 Element로 반환하는 함수
     const getListItem = (index: number, places: placeType) => {
       const el = document.createElement('li')
-      const itemStr = `
-          <div class="info">
-            <span class="marker marker_${index + 1}">
-              ${index + 1}
-            </span>
-            <a href="${places.place_url}">
-              <h5 class="info-item place-name">${places.place_name}</h5>
-              ${
-                places.road_address_name
-                  ? `<span class="info-item road-address-name">
-                    ${places.road_address_name}
-                  </span>
-                  <span class="info-item address-name">
-                 	${places.address_name}
-               	  </span>`
-                  : `<span class="info-item address-name">
-             	    ${places.address_name}
-                  </span>`
-              }
-              <span class="info-item tel">
-                ${places.phone}
-              </span>
-            </a>
-          </div>
-          `
+      const itemStr = `<a href="${places.place_url}" target="_blank">${places.place_name}</a>`
       el.innerHTML = itemStr
       el.className = 'item'
       return el
@@ -124,10 +100,8 @@ const Map = (props: propsType) => {
   return (
     <div className='map-container'>
       <div id='map' className={styles.map} />
-      <div id='search-result'>
-        <div className={styles.listResult}>
-          <ul id='places-list' className={styles.list} />
-        </div>
+      <div id='search-result' className={styles.listResult}>
+        <ul id='places-list' className={styles.list} />
       </div>
     </div>
   )
