@@ -2,5 +2,7 @@
 @use '/src/styles/constants/colors';
 
 .bg {
-  // background-color: colors.$YELLOW;
+  @include flexbox.flexbox(start, center);
+  flex-direction: column;
+  height: 100vh;
 }

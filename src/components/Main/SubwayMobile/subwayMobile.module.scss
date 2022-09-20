@@ -1,0 +1,55 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
+
+.subwayList::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+.subwayList::-webkit-scrollbar-thumb {
+  background-color: colors.$GRAY3;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.subwayList::-webkit-scrollbar-track {
+  background-color: colors.$GRAYA;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px colors.$GRAYD;
+}
+.subwayList {
+  @include flexbox.flexbox(start, center);
+  width: 300px;
+  height: 450px;
+  flex-direction: column;
+  padding: 0;
+  overflow: scroll;
+  list-style-type: none;
+  .subwayElement {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    .station {
+      @include flexbox.flexbox(center, center);
+      width: 100%;
+      height: 100px;
+
+      .circle {
+        @include flexbox.flexbox(center, center);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 20px solid;
+        background-color: colors.$WHITE;
+        text-align: center;
+        .info {
+          text-align: center;
+          overflow: auto;
+          font-weight: 900;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
