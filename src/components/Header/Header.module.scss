@@ -5,11 +5,9 @@
   @include flexbox.flexbox(around, center);
   width: 100%;
   flex-direction: column;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   .title {
     font-size: 30px;
-    padding: 10px;
-    margin: 10px;
     color: colors.$GRAY2;
   }
 }

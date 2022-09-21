@@ -9,7 +9,7 @@ const Mobile = () => {
   return isMobile ? <SubwayMobile /> : null
 }
 const Desktop = () => {
-  const isDesktop = useMediaQuery({ minWidth: 992 })
+  const isDesktop = useMediaQuery({ minWidth: 767 })
   return isDesktop ? <Subway /> : null
 }
 const App = () => {

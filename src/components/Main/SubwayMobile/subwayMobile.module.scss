@@ -16,25 +16,39 @@
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px colors.$GRAYD;
 }
+.subwayListsWrap {
+  @include flexbox.flexbox(start, center);
+  flex-direction: column;
+}
+.searcher {
+  height: 60px;
+  width: 200px;
+  padding-left: 10px;
+  overflow: hidden;
+  background: colors.$WHITE;
+  border-radius: 50px;
+  border: 1px solid colors.$GRAYD;
+}
 .subwayList {
   @include flexbox.flexbox(start, center);
   width: 300px;
-  height: 450px;
+  height: 400px;
   flex-direction: column;
   padding: 0;
   overflow: scroll;
   list-style-type: none;
   .subwayElement {
     width: 100%;
-    height: 100px;
+    height: 150px;
     margin-top: 20px;
     background-color: transparent;
-    border: none;
+    border: 1px solid colors.$GRAYD;
+    border-radius: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
     .station {
       @include flexbox.flexbox(center, center);
       width: 100%;
-      height: 100px;
-
+      height: 120px;
       .circle {
         @include flexbox.flexbox(center, center);
         width: 70px;
