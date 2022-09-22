@@ -18,6 +18,7 @@
 }
 .image {
   display: flex;
+  flex-direction: column;
   width: 800px;
   height: 500px;
   margin: 0px auto;
@@ -30,4 +31,13 @@
 }
 area {
   cursor: pointer;
+}
+.searcher {
+  width: 200px;
+  height: 60px;
+  padding-left: 10px;
+  overflow: hidden;
+  background: colors.$WHITE;
+  border-radius: 50px;
+  border: 1px solid colors.$GRAYD;
 }

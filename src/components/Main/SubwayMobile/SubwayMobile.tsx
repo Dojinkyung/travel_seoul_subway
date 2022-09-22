@@ -10,13 +10,14 @@ const SubwayMobile = () => {
   const [station, setStation] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const [search, setSearch] = useState('')
+  const [line, setLine] = useState('')
 
   const closeReq = () => {
     setIsOpen(false)
   }
   const handleStation = (event: any) => {
     setStation(event.target.id)
-    console.log(event.target.id)
+    setLine(event.target.value)
     setIsOpen(true)
   }
   const onChange = (event: { currentTarget: { value: SetStateAction<string> } }) => {
@@ -26,7 +27,12 @@ const SubwayMobile = () => {
     if (!search) {
       return items[Number(selected) - 1]
     }
-    return items[Number(selected) - 1].filter((data) => {
+    let arr: any[] = []
+    items.forEach((item) => {
+      arr = [...arr, ...item]
+    })
+
+    return arr.filter((data) => {
       return data.Title.includes(search)
     })
   }, [search, selected])
@@ -37,29 +43,22 @@ const SubwayMobile = () => {
       <ul className={styles.subwayList}>
         {searchStation.map((item) => {
           return (
-            <button
-              key={item.Key}
-              type='button'
-              id={item.Title}
-              onClick={handleStation}
-              className={styles.subwayElement}
-            >
-              <li className={styles.station} id={item.Title}>
-                <div
-                  className={styles.circle}
-                  id={item.Title}
-                  style={{ borderColor: colors[parseInt(selected, 10) - 1] }}
-                >
-                  <h1 className={styles.info} id={item.Title}>
-                    {item.Title}역
-                  </h1>
-                </div>
-              </li>
-            </button>
+            <li key={item.Key} id={item.Title} value={item.Line} className={styles.station}>
+              <button
+                type='button'
+                style={{ borderColor: colors[item.Line - 1] }}
+                className={styles.circle}
+                value={item.Line}
+                id={item.Title}
+                onClick={handleStation}
+              >
+                {item.Title}역
+              </button>
+            </li>
           )
         })}
       </ul>
-      {isOpen ? <Modal selectedLine={selected} open={isOpen} close={closeReq} item={station} /> : null}
+      {isOpen ? <Modal selectedLine={line} open={isOpen} close={closeReq} item={station} /> : null}
     </div>
   )
 }

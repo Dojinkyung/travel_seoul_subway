@@ -21,8 +21,8 @@
   flex-direction: column;
 }
 .searcher {
-  height: 60px;
   width: 200px;
+  height: 60px;
   padding-left: 10px;
   overflow: hidden;
   background: colors.$WHITE;
@@ -37,33 +37,22 @@
   padding: 0;
   overflow: scroll;
   list-style-type: none;
-  .subwayElement {
+  .station {
+    @include flexbox.flexbox(center, center);
     width: 100%;
-    height: 150px;
+    height: 200px;
     margin-top: 20px;
-    background-color: transparent;
-    border: 1px solid colors.$GRAYD;
-    border-radius: 20px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
-    .station {
+    .circle {
       @include flexbox.flexbox(center, center);
-      width: 100%;
+      width: 120px;
       height: 120px;
-      .circle {
-        @include flexbox.flexbox(center, center);
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        border: 20px solid;
-        background-color: colors.$WHITE;
-        text-align: center;
-        .info {
-          text-align: center;
-          overflow: auto;
-          font-weight: 900;
-          font-size: 15px;
-        }
-      }
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      border: 20px solid;
+      background-color: colors.$WHITE;
+      text-align: center;
+      font-weight: 900;
+      font-size: 15px;
     }
   }
 }
