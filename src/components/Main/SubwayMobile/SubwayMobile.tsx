@@ -2,7 +2,7 @@ import { SetStateAction, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getTrainId } from '../../../redux/slice'
 import Modal from '../Modal/Modal'
-import { items } from '../Subway/Lines'
+import { items } from '../../../data/Lines'
 import styles from './subwayMobile.module.scss'
 
 const SubwayMobile = () => {
