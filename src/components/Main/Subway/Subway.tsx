@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getTrainId } from '../../../redux/slice'
-import Modal from '../Modal/Modal'
+import Modal from '../modal/Modal'
 import { items } from '../../../data/Lines'
 import styles from './subway.module.scss'
 

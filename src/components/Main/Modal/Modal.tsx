@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import { X } from '../../../assets/svgs'
-import Map from '../Map/MapContainer'
+import Map from '../map/MapContainer'
 import styles from './modal.module.scss'
 
 interface props {

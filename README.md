@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# ✨역별 맛집 검색기✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚀 배포
 
-## Available Scripts
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c963488-351b-41d4-9152-60535ac564b2/deploy-status)](https://iridescent-florentine-38b850.netlify.app/)
 
-In the project directory, you can run:
+# 🔧 기술 스택
 
-### `npm start`
+- Typescript
+- React
+- react-redux
+- SCSS
+- react-responsive
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 폴더 구조
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+ 📦src
+ ┣ 📂assets
+ ┃ ┗ 📂svgs #svg
+ ┣ 📂components
+ ┃ ┣ 📂Header #헤더
+ ┃ ┃ ┗ 📂Dropdown #드롭다운
+ ┃ ┗ 📂Main #메인부분
+ ┃ ┃ ┣ 📂Map #카카오맵 api
+ ┃ ┃ ┣ 📂Modal #모달
+ ┃ ┃ ┣ 📂Subway # 데스크탑 버전 지하철역
+ ┃ ┃ ┗ 📂SubwayMobile #모바일 버전 지하철역
+ ┣ 📂data #지하철역 정보
+ ┣ 📂redux #리덕스 툴킷
+ ┗ 📂styles # CSS 스타일을 위한 폴더
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 📌 실행 방법
 
-### `npm run build`
+## 1. 설치
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/Dojinkyung/travel_seoul_subway.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+yarn install && yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 2. 📸 화면
+- 데스크탑
+![데스크](https://user-images.githubusercontent.com/63532503/192145118-7df83e7c-284f-4133-a6d9-e90387e0a4d0.gif)
+- 모바일
+![모바일](https://user-images.githubusercontent.com/63532503/192145231-bba76bc7-493f-4ab3-9f5e-97622305c037.gif)
 
-### `npm run eject`
+# 💡 구현 내용
+서울 지하철 역 주변의 맛집 리스트를 보여주는 react 앱을 구현했습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 데이터 활용
+카카오 맵 검색을 이용하여 지하철 역 주변 맛집 리스트를 보여주었습니다.

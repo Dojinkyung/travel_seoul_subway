@@ -1,5 +1,5 @@
-import Dropdown from './Dropdown/Dropdown'
-import styles from './Header.module.scss'
+import Dropdown from './dropdown/Dropdown'
+import styles from './header.module.scss'
 
 const Header = () => {
   return (
