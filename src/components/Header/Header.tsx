@@ -1,4 +1,4 @@
-import Dropdown from './dropdown/Dropdown'
+import Dropdown from '../dropdown/Dropdown'
 import styles from './header.module.scss'
 
 const Header = () => {

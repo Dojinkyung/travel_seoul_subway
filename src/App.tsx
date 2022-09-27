@@ -1,7 +1,8 @@
+import { useMediaQuery } from 'react-responsive'
+
+import styles from './app.module.scss'
 import Header from './components/header/Header'
 import Subway from './components/main/subway/Subway'
-import styles from './app.module.scss'
-import { useMediaQuery } from 'react-responsive'
 import SubwayMobile from './components/main/subwayMobile/SubwayMobile'
 
 const Mobile = () => {

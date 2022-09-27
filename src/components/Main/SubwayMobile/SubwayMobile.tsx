@@ -1,9 +1,10 @@
 import { SetStateAction, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { getTrainId } from '../../../redux/slice'
+
 import Modal from '../modal/Modal'
 import { items } from '../../../data/Lines'
 import styles from './subwayMobile.module.scss'
+import { getTrainId } from '../../../redux/slice'
 
 const SubwayMobile = () => {
   const selected = useSelector(getTrainId)

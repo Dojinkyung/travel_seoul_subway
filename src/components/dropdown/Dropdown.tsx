@@ -1,6 +1,6 @@
 import { useState, useEffect, SetStateAction } from 'react'
 import { useDispatch } from 'react-redux'
-import { setTrainId } from '../../../redux/slice'
+import { setTrainId } from '../../redux/slice'
 import styles from './dropdown.module.scss'
 
 const Dropdown = () => {

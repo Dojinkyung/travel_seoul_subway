@@ -3,6 +3,6 @@
 
 .bg {
   @include flexbox.flexbox(start, center);
-  flex-direction: column;
   height: 100vh;
+  flex-direction: column;
 }
